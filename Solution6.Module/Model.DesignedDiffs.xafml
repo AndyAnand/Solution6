@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="Solution6" Logo="ExpressAppLogo">
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="15.1.8.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Conteudo_DetailView">
+      <Items>
+        <PropertyEditor Id="Topico" AllowEdit="True" LookupProperty="Nome" DataSourceCriteria="Not [Topicos][]" />
+      </Items>
+    </DetailView>
+    <ListView Id="Conteudo_ListView">
+      <Columns>
+        <ColumnInfo Id="Topico" LookupProperty="Nome" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Topico_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="10.708661417322835">
+            <LayoutGroup Id="Topico" RelativeSize="51.470588235294116">
+              <LayoutItem Id="Icone" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Category" RelativeSize="48.529411764705884">
+              <LayoutItem Id="Nome" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="89.29133858267717" Caption="Descricao">
+            <LayoutItem Id="Descricao" RelativeSize="4.7619047619047619" />
+            <LayoutGroup Id="Topicos" ShowCaption="True" Index="1" RelativeSize="45.679012345679013" IsNewNode="True">
+              <LayoutItem Id="Topicos" ShowCaption="False" ViewItem="Topicos" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Conteudos" ShowCaption="True" Index="2" RelativeSize="49.559082892416228" IsNewNode="True">
+              <LayoutItem Id="Conteudos" ShowCaption="False" ViewItem="Conteudos" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="77.466666666666669" Removed="True">
+            <LayoutGroup Id="Conteudos" Index="0" RelativeSize="100">
+              <LayoutItem Id="Conteudos" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Topicos" Removed="True" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
